@@ -1,0 +1,14 @@
+first occurence in array
+=======================================
+public class Main
+{
+	public static void main(String[] args) {
+		int[] arr = { 1,6,5,3,2};
+		System.out.println(index(0, arr, 6));
+	}
+	public static int index(int n, int[] arr,int target){
+	    if (n == arr.length) return -1;
+	    if(arr[n] == target) return n;
+	    return index(n+1,arr,target);
+	}
+}
