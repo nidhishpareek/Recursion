@@ -1,0 +1,24 @@
+return all the indexes of specific index;
+===================================================
+import java.util.*; 
+public class Main
+{
+	public static void main(String[] args) {
+		int[] arr = { 1,6,4,3,6};
+		System.out.println(Arrays.toString(function(0, arr, 6,0)));
+	}
+
+	public static int[] function(int n, int[] arr,int target, int fsf){
+	    if ( n== arr.length){
+	        int[] ans = new int[fsf]; return ans;
+	    } 
+	    if(arr[n] == target){
+	        int[] ans = function(n+1, arr, target,fsf+1);
+	        ans[fsf] = n; return ans;
+	    }
+	    else{
+	        return function(n+1, arr, target,fsf);
+	    }
+	     
+	}
+}
