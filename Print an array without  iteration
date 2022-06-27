@@ -1,0 +1,15 @@
+print array elements without iteration and with reccurstion
+/////////////////////////////////////////////
+public class Main
+{
+	public static void main(String[] args) {
+		int n =4;
+		int[] arr = { 1,2,3,4,5};
+		tower(n, arr);
+	}
+	public static void tower(int n, int[] arr){
+	    if (n < 0) return;
+	    tower(n-1,arr);
+	    System.out.println(arr[n]);
+	}
+}
