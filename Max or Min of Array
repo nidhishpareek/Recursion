@@ -1,0 +1,15 @@
+Maximum / min of array
+===================================
+public class Main
+{
+	public static void main(String[] args) {
+		int[] arr = { 1,6,5,3,2};
+		int n =arr.length-1;
+		System.out.println(maximum(n, arr));
+	}
+	public static int maximum(int n, int[] arr){
+	    if (n == 0) return arr[0];
+	    return (Math.max(arr[n],maximum(n-1,arr)));
+	    
+	}
+}
