@@ -1,0 +1,16 @@
+Print increasing and decreasing order with recursion
+
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        reccursion(5);
+    }
+    static void reccursion(int n){
+        if(n ==0) return;
+        System.out.println(n);
+        reccursion(n-1);
+        System.out.println(n);
+    }
+}
