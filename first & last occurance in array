@@ -1,0 +1,20 @@
+first & last occurence  in array
+=======================================
+public class Main
+{
+	public static void main(String[] args) {
+		int[] arr = { 1,6,5,3,2};
+		System.out.println(first(0, arr, 6));
+		System.out.println(last(arr.length-1, arr, 4));
+	}
+	public static int first(int n, int[] arr,int target){
+	    if (n == arr.length) return -1;
+	    if(arr[n] == target) return n;
+	    return first(n+1,arr,target);
+	}
+	public static int last(int n, int[] arr,int target){
+	    if (n == -1) return -1;
+	    if(arr[n] == target) return n;
+	    return last(n-1,arr,target);
+	}
+}
