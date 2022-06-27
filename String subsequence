@@ -1,0 +1,31 @@
+String subsequence
+======================================================
+import java.util.*;  import java.io.*;
+public class Main
+{
+	public static void main(String[] args) {
+		List<String> op = function("abc");
+		Collections.sort(op);
+		op.remove(0);
+		System.out.println(op);
+	}
+
+	public static List<String> function(String str){
+	    if ( str.length() == 0 ){
+	        List<String> ans = new ArrayList<>();
+	        ans.add(str);
+	        return ans;
+	    }
+	    char c = str.charAt(0);
+	    List<String> got= function(str.substring(1));
+	    List<String> latest = new ArrayList<>();
+	    for(String s: got){
+	        latest.add(s);
+	    }
+	    for(String s: got){
+	        latest.add(c+s);
+	    }
+	    return latest;
+
+	}
+}
